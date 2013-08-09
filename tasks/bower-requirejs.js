@@ -91,7 +91,7 @@ module.exports = function (grunt) {
 								// iterate through the main array and filter it down
 								// to only .js files
 								var jsfiles = _.filter(val, function(inval) {
-									return path.extname(inval) === '.js';
+									return path.extname(inval) === '.js' || grunt.file.isDir(inval);
 								});
 
 								// if there are no js files in main, delete
